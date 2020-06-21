@@ -133,23 +133,23 @@ class DocsServer {
 
   // Get all blog posts
   async getBlogPostFiles () {
-    // en lang
-    const enBlogPaths = await this.glob('en/blog/*.md')
-    this.blogPostFiles.en =
+    // vi lang
+    const enBlogPaths = await this.glob('vi/blog/*.md')
+    this.blogPostFiles.vi =
       await Promise.all(
         enBlogPaths.map((path) => this.getBlogPost(path))
       )
     // sort by date descending
-    this.blogPostFiles.en.sort((a, b) => b.date - a.date)
-    this.addNavigationLinks(this.blogPostFiles.en)
+    this.blogPostFiles.vi.sort((a, b) => b.date - a.date)
+    this.addNavigationLinks(this.blogPostFiles.vi)
 
     // other langs
-    const langs = Object.keys(this.langs).filter(lang => lang !== 'en')
+    const langs = Object.keys(this.langs).filter(lang => lang !== 'vi')
     for (const lang of langs) {
       this.blogPostFiles[lang] = []
       // Add english posts but overwrites if current lang exists
-      for (let i = 0; i < this.blogPostFiles.en.length; i++) {
-        const post = this.blogPostFiles.en[i]
+      for (let i = 0; i < this.blogPostFiles.vi.length; i++) {
+        const post = this.blogPostFiles.vi[i]
         const path = `${lang}/blog/${post.slug}.md`
 
         await this.getBlogPost(path)
@@ -176,7 +176,7 @@ class DocsServer {
         }
       }
       // sort again if posts added
-      if (this.blogPostFiles[lang].length !== this.blogPostFiles.en.length) {
+      if (this.blogPostFiles[lang].length !== this.blogPostFiles.vi.length) {
         this.blogPostFiles[lang].sort((a, b) => b.date - a.date)
       }
       // add navigation links
@@ -309,7 +309,7 @@ class DocsServer {
       homepage[lang][part] = file
     }))
 
-    // Copy fallback resource from defaultLang: en
+    // Copy fallback resource from defaultLang: vi
     // Target check uses this.langs, */lang.json
     for (const lang in this.langs) {
       if (lang === this.defaultLang) {
@@ -445,9 +445,9 @@ class DocsServer {
     // Check if path exists
     let doc = this.docsFiles[path]
     const isInvalid = !doc || (!doc.body && !Object.keys(doc.attrs).length)
-    if (isInvalid && lang !== 'en') {
+    if (isInvalid && lang !== 'vi') {
       // Check fallback for EN
-      doc = this.docsFiles['en' + path.slice(2)]
+      doc = this.docsFiles['vi' + path.slice(2)]
       if (!doc) {
         throw new Error('File not found')
       }

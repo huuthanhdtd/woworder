@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     formatDateByLocale (d) {
-      const currentLocale = this.$store.state.locale || 'en'
+      const currentLocale = this.$store.state.locale || 'vi'
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(d).toLocaleDateString(currentLocale, options)
     },

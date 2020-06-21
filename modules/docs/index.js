@@ -10,7 +10,8 @@ module.exports = async function (moduleOptions) {
   const options = {
     port: 3001,
     docsDir: join(isDev ? this.options.srcDir : this.options.buildDir, 'docs'),
-    repo: 'nuxt/docs',
+    //docsDir: join(__dirname, '..', '..', 'docs'),
+    repo: 'woworder/docs',
     watch: isDev,
     ...this.options.docs,
     ...moduleOptions

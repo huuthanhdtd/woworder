@@ -4,17 +4,17 @@
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
           <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear">
-            The NUXT<span class="text-nuxt-lightgreen">JS</span> Team<br>
+            Wow<span class="text-nuxt-lightgreen">Order</span> Team<br>
           </h1>
           <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
-            The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.
+            Chúng tôi có một đội ngũ rất tích cực và gắn bó, luôn nỗ lực để thúc đẩy WowOrder tiến lên.
           </h3>
         </div>
         <TeamIllustration class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <div class="bg-light-surface dark:bg-dark-surface rounded p-8 transition-colors duration-300 ease-linear">
         <h2 class="text-2xl xl:text-3xl text-center text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 pt-4">
-          Active Core Team Members
+          Thành viên tiêu biểu
         </h2>
         <div class="flex flex-wrap -mx-2 md:-mx-4">
           <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 lg:w-1/3 p-4">
@@ -67,117 +67,57 @@ export default {
     return {
       core: [
         {
-          name: 'Sébastien Chopin',
-          city: 'Bordeaux, France',
+          name: 'FullStack',
+          city: 'Danang, VN',
           github: 'Atinux',
           twitter: 'Atinux',
-          website: 'https://atinux.com',
+          website: 'https://fullstack.com',
           work: {
-            role: 'Creator',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
+            role: 'Dev',
+            org: 'WowOrder',
+            orgUrl: 'https://woworder.org'
           }
         },
         {
-          name: 'Alexandre Chopin',
-          city: 'Bordeaux, France',
+          name: 'TQC',
+          city: 'Danang, VN',
           github: 'alexchopin',
           twitter: 'iamnuxt',
-          website: 'https://alexchopin.com',
+          website: 'https://tqc.com',
           work: {
             role: 'Design',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
+            org: 'WowOrder',
+            orgUrl: 'https://woworder.org'
           }
         },
         {
-          name: 'Pooya Parsa',
-          alias: 'پویا پارسا',
-          city: 'Amsterdam, Netherlands',
+          name: 'Paladin',
+          alias: 'Cây đèn thần',
+          city: 'Danang, VN',
           github: 'pi0',
           twitter: '_pi0_',
           work: {
             role: 'Architect',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
+            org: 'WowOrder',
+            orgUrl: 'https://woworder.org'
           }
         },
         {
-          name: 'Clark Du',
-          alias: '杜欣',
-          city: 'Dublin, Ireland',
-          github: 'clarkdo',
-          twitter: 'ClarkDu_',
-          work: {
-            role: 'Core Expert',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
-          }
-        },
-        {
-          name: 'Alexander Lichter',
-          city: 'Dresden, Germany',
-          github: 'manniL',
-          twitter: 'TheAlexLichter',
-          website: 'https://blog.lichter.io',
-          work: {
-            role: 'Community',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
-          }
-        },
-        {
-          name: 'Jonas Galvez',
-          city: 'Barretos, Brazil',
-          github: 'galvez',
-          twitter: 'anothergalvez',
-          website: 'https://hire.jonasgalvez.com.br',
-          work: {
-            role: 'Creator',
-            org: 'NuxtPress',
-            orgUrl: 'https://nuxt.press'
-          }
-        },
-        {
-          name: 'Dmitry Molotkov',
-          alias: 'Дзмітрый Малаткоў',
-          city: 'Gomel, Belarus',
-          github: 'aldarund',
-          twitter: 'aldarund',
-          work: {
-            role: 'Answer Machine',
-            org: 'NuxtJS',
-            orgUrl: 'https://stackoverflow.com/search?q=user%3A239354+%5Bnuxt.js%5D'
-          }
-        },
-        {
-          name: 'Kevin Marrec',
-          city: 'Rennes, France',
-          github: 'kevinmarrec',
-          twitter: 'K_Marrec',
-          website: 'https://marrec.io',
-          work: {
-            role: 'Creator',
-            org: 'Nuxt TS',
-            orgUrl: 'https://typescript.nuxtjs.org'
-          }
-        },
-        {
-          name: 'Pim',
-          city: 'The Netherlands',
+          name: 'JackN',
+          city: 'Danang, VN',
           github: 'pimlie',
           work: {
-            role: 'Hacker',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
+            role: 'Dev',
+            org: 'WowOrder',
+            orgUrl: 'https://woworder.org'
           }
         }
       ]
     }
   },
   head () {
-    const title = 'The NuxtJS Team'
-    const description = 'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+    const title = 'The WowOrder Team'
+    const description = 'Chúng tôi có một đội ngũ rất tích cực và gắn bó, luôn nỗ lực để thúc đẩy WowOrder tiến lên.'
 
     return {
       title,

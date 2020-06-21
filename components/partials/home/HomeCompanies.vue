@@ -76,7 +76,7 @@ export default {
       const companies = this.companies[locale] || []
 
       // minimum 10 companies
-      if (companies.length < 15 && locale !== 'en') {
+      if (companies.length < 15 && locale !== 'vi') {
         // Fill with english companies and remove duplicates
         return companies.concat(this.companies.en.filter(enCompany => !companies.find(c => c.img === enCompany.img)))
       }

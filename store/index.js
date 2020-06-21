@@ -10,7 +10,7 @@ export const state = () => ({
   docVersion: '',
   ghVersion: '',
   visibleAffix: false,
-  locale: 'en',
+  locale: 'vi',
   lang: {},
   menu: {},
   homepage: {},

@@ -17,9 +17,9 @@
           Thành viên tiêu biểu
         </h2>
         <div class="flex flex-wrap -mx-2 md:-mx-4">
-          <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 lg:w-1/4 p-4">
             <div class="rounded p-6">
-              <img class="h-32 w-32 rounded-full mx-auto" :src="`https://github.com/${profile.github}.png`">
+              <div class="diamond mx-auto mb-3"><div class="diamond-full" :style="`background-image: url(https://github.com/${profile.github}.png)`"></div></div>
               <div class="text-center pt-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">
                 <h2 class="text-xl">
                   {{ profile.name }} <span v-if="profile.alias" class="font-normal text-sm">({{ profile.alias }})</span>
@@ -30,7 +30,7 @@
                 <div class="text-sm py-1">
                   {{ profile.city }}
                 </div>
-                <div class="py-2">
+                <div class="py-2" v-if="false">
                   <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank" class="mx-1">
                     <github-icon class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" />
                   </a>
@@ -134,3 +134,23 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+    .diamond {
+      width: 6rem;
+      height: 6rem;
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      overflow: hidden;
+    }
+    .diamond-full {
+      background-size: 10rem 10rem;
+      width: 12rem;
+      height: 12rem;
+      margin: -2rem;
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+</style>
